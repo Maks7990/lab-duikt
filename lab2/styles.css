@@ -1,0 +1,90 @@
+/* 1. Перший <li> жирний */
+ul li:first-child {
+    font-weight: bold;
+}
+
+/* 2. <a> які є останніми дочірніми елементами свого батька */
+a:last-child {
+    color: red;
+}
+
+/* 3. input disabled */
+input:disabled {
+    background-color: gray;
+}
+
+/* 4. <p> прямі діти <div> */
+div > p {
+    font-weight: bold;
+}
+
+/* 5. елементи, що мають href який починається з https */
+a[href^="https"] {
+    color: green;
+}
+
+/* 6. input[type="text"] рамка 1px solid синього */
+input[type="text"] {
+    border: 1px solid blue;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+/* 7. <li> які є першими або останніми дочірніми елементами батька */
+ul li:first-child,
+ul li:last-child {
+    font-size: 24px;
+}
+
+/* 8. <p> нащадки <div> */
+div p {
+    font-size: 16px;
+}
+
+/* 9. input:checked - фон світло-блакитний
+   Для чекбоксів/радіо може не показуватися background — додаю accent-color для кращого результату */
+input:checked {
+    background-color: lightblue;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    accent-color: lightblue;
+}
+
+/* 10. <a> які є прямими дітьми <li> — підкреслити */
+li > a {
+    text-decoration: underline;
+}
+
+/* 11. парні <li> */ 
+ul li:nth-child(even) {
+    font-weight: bold;
+}
+
+/* 12. input[type=text] які не disabled — фон сірий */
+input[type="text"]:not(:disabled) {
+    background-color: #d9d9d9;
+}
+
+/* 13. <p> які є першими дочками свого батька */
+p:first-child {
+    font-size: 24px;
+}
+
+/* 14. <li> що йде після елемента з класом .special — перечеркнуте */
+.special + li {
+    text-decoration: line-through;
+}
+
+/* 15. перша літера кожного <p> */
+p::first-letter {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* 16. ::after для кожного <a> з вмістом ↗ */
+a::after {
+    content: " ↗";
+    font-size: 0.9em;
+    margin-left: 3px;
+}
