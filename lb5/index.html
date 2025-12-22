@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Планер</title>
+
+  <!-- Custom fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <header class="header card">
+      <div class="header__left">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">P</div>
+          <div class="brand__text">
+            <h1 class="brand__title" contenteditable="true" spellcheck="false" data-edit="title">
+              Мій планер
+            </h1>
+            <p class="brand__subtitle" contenteditable="true" spellcheck="false" data-edit="subtitle">
+              План на день і тиждень
+            </p>
+          </div>
+        </div>
+
+        <div class="status">
+          <span class="pill" id="donePill">0/0 виконано</span>
+          <span class="pill pill--ok" id="storagePill">Saved</span>
+        </div>
+      </div>
+
+      <div class="header__right">
+        <div class="field">
+          <label class="label" for="date">Дата</label>
+          <input class="input" type="date" id="date" />
+        </div>
+        <div class="field">
+          <label class="label" for="mood">Настрій</label>
+          <input class="input" type="text" id="mood" placeholder="Напр. 🙂 продуктивний день" />
+        </div>
+      </div>
+    </header>
+
+    <section class="today card" aria-label="Сьогодні">
+      <div class="cardHead">
+        <h2 class="h2">Сьогодні</h2>
+        <div class="actions">
+          <button class="btn" type="button" id="addTaskBtn">+ Додати задачу</button>
+          <button class="btn btn--ghost" type="button" id="clearDoneBtn">Очистити виконані</button>
+        </div>
+      </div>
+
+      <div class="twoCol">
+        <div class="field">
+          <label class="label" for="top3">Топ-3 пріоритети</label>
+          <textarea class="textarea" id="top3" rows="5" placeholder="1) ...&#10;2) ...&#10;3) ..."></textarea>
+        </div>
+
+        <div class="field">
+          <label class="label" for="notes">Нотатки</label>
+          <textarea class="textarea" id="notes" rows="5" placeholder="Дзвінки, ідеї, важливе..."></textarea>
+        </div>
+      </div>
+
+      <div class="divider" role="separator" aria-hidden="true"></div>
+
+      <ul class="taskList" id="taskList" aria-label="Список задач">
+        <!-- JS заповнить -->
+      </ul>
+    </section>
+
+    <aside class="week card" aria-label="Тижневий план">
+      <div class="cardHead">
+        <h2 class="h2">Тиждень</h2>
+        <p class="muted" contenteditable="true" spellcheck="false" data-edit="weekNote">
+          Тут можна коротко описати фокус тижня.
+        </p>
+      </div>
+
+      <div class="weekGrid" id="weekGrid">
+        <!-- JS заповнить -->
+      </div>
+    </aside>
+
+    <section class="goals card" aria-label="Цілі">
+      <div class="cardHead">
+        <h2 class="h2">Цілі</h2>
+        <p class="muted">Редагуй текст і відмічай прогрес</p>
+      </div>
+
+      <div class="goalList" id="goalList">
+        <!-- JS заповнить -->
+      </div>
+
+      <div class="goalActions">
+        <button class="btn btn--ghost" type="button" id="addGoalBtn">+ Додати ціль</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">Поля з підкресленням можна редагувати. Дані зберігаються в браузері.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
