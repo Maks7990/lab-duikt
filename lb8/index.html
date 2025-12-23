@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфоліо — Головна</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="topline"></div>
+
+  <!-- Overlay for mobile menu -->
+  <div class="overlay" id="overlay" hidden></div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">Shostak Maks</div>
+
+        <!-- Burger -->
+        <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" id="menu" aria-label="Навігація">
+          <a class="active" href="#">Головна</a>
+          <a href="#">Про мене</a>
+          <a href="#labs">Лабораторні</a>
+          <a href="#pract">Практичні</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Hi, I am Shostak Maks,<br>Сomputer Еngineer</h1>
+          <p>
+            Студент групи KID-42. На цьому сайті зібрані всі лабораторні та практичні роботи
+            з дисципліни “Веб-технології та веб-дизайн”.
+          </p>
+          <a class="btn" href="#" download>Download Resume</a>
+        </div>
+
+        <div class="avatar-wrap">
+          <div class="avatar" aria-label="Аватар">
+            <img src="photo_2025-11-04_14-42-15.jpg" alt="Avatar">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LABS -->
+    <section class="section" id="labs">
+      <div class="section-head">
+        <h2 class="section-title">Лабораторні роботи</h2>
+        <a class="view-all" href="#">Переглянути всі</a>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Лабораторна робота №2</h3>
+          <p>Основи HTML .</p>
+          <div class="date">Вересень 2025</div>
+        </article>
+
+        <article class="card">
+          <h3>Лабораторна робота №3</h3>
+          <p>Копію структури головної сторінки YouTube використовуючи FlexBox.</p>
+          <div class="date">Жовтень 2024</div>
+        </article>
+
+        <article class="card">
+          <h3>Лабораторна робота №4</h3>
+          <p>Розробити веб-сторінку у вигляді fullsize клавіатури.</p>
+          <div class="date">Листопад 2024</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRACT -->
+    <section class="section" id="pract">
+      <div class="section-head">
+        <h2 class="section-title">Практичні роботи</h2>
+      </div>
+
+      <div class="list">
+        <article class="list-item">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop"
+                 alt="Практична робота прев’ю">
+          </div>
+          <div>
+            <div class="item-top">
+              <h3 class="item-title">Практична робота №1</h3>
+              <span class="badge">HTML</span>
+            </div>
+            <p class="item-desc">Основи створення вебсторінки.</p>
+          </div>
+        </article>
+
+        <article class="list-item">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop"
+                 alt="Практична робота прев’ю">
+          </div>
+          <div>
+            <div class="item-top">
+              <h3 class="item-title">Практична робота №4</h3>
+              <span class="badge">CSS</span>
+            </div>
+            <p class="item-desc">Розміщення контенту та робота з каскадними стилями.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
